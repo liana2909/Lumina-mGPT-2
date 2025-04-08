@@ -109,12 +109,17 @@ Please refer to  [TRAIN.md](TRAIN.md)
 - [Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding](https://github.com/tyshiwo1/Accelerating-T2I-AR-with-SJD/)
 - [Chameleon: Mixed-Modal Early-Fusion Foundation Models](https://github.com/facebookresearch/chameleon)
 
+
+## 🔥 Open Positions
+We are hiring interns and full-time researchers at the Alpha VLLM Group, Shanghai AI Lab. If you are interested, please contact alphavllm@gmail.com.
+
+
 ## 📖 BibTeX
 
 ```
 @misc{lumina-mgpt-2.0,
       title={Lumina-mGPT 2.0: Stand-alone Autoregressive Image Modeling},
-      author={AlphaVLLM Team},
+      author={Alpha VLLM Team},
       year={2025},
       url={https://github.com/Alpha-VLLM/Lumina-mGPT-2.0},
 }

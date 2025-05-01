@@ -102,7 +102,7 @@ Please refer to  [TRAIN.md](TRAIN.md)
 |----------------------|--------|--------|--------------------|--------------------|
 | Lumina-mGPT 2.0      | 7B     | 768px  | [7B_768px](https://huggingface.co/Alpha-VLLM/Lumina-mGPT-2.0)       | Text-to-Image & Image Pair Generation |
 
-## 🌟 Acknowledgements
+## 📜 Acknowledgements
 
 **Thanks to the following open-sourced codebase for their wonderful work and codebase!**
 - [Lumina-mGPT: Illuminate Flexible Photorealistic Text-to-Image Generation with Multimodal Generative Pretraining](https://github.com/Alpha-VLLM/Lumina-mGPT)
@@ -113,6 +113,9 @@ Please refer to  [TRAIN.md](TRAIN.md)
 ## 🔥 Open Positions
 We are hiring interns and full-time researchers at the Alpha VLLM Group, Shanghai AI Lab. If you are interested, please contact alphavllm@gmail.com.
 
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Alpha-VLLM/Lumina-mGPT-2.0&type=Date)](https://www.star-history.com/#Alpha-VLLM/Lumina-mGPT-2.0&Date)
 
 ## 📖 BibTeX
 

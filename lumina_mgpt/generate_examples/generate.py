@@ -50,6 +50,23 @@ if __name__ == "__main__":
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
 
+    if os.path.isdir(args.model_path):
+        model_ckpt = os.path.join(args.model_path, "movqgan/270M/movqgan_270M.ckpt")
+    else:
+        model_ckpt = args.model_path
+
+    print(f"Using model checkpoint path: {model_ckpt}")
+
+    download_model_if_missing(model_ckpt)
+
+    inference_solver = FlexARInferenceSolver(
+        model_path=args.model_path,
+        precision="bf16",
+        quant=args.quant,
+        sjd=args.speculative_jacobi,
+    )
+    print("checkpoint load finished")
+    
     model_ckpt = os.path.join(args.model_path, "lumina_mgpt/movqgan/270M/movqgan_270M.ckpt")
     download_model_if_missing(model_ckpt)
 

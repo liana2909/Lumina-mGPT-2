@@ -10,6 +10,18 @@ from xllmx.util.misc import random_seed
 import time
 from jacobi_utils_static import renew_pipeline_sampler
 
+def download_model_if_missing(model_ckpt_path):
+    if not os.path.exists(model_ckpt_path):
+        print(f"Model checkpoint not found at {model_ckpt_path}, downloading...")
+        os.makedirs(os.path.dirname(model_ckpt_path), exist_ok=True)
+        subprocess.run([
+            "wget",
+            "-O", model_ckpt_path,
+            "https://huggingface.co/ai-forever/MoVQGAN/resolve/main/movqgan_270M.ckpt"
+        ], check=True)
+    else:
+        print("✅ Model checkpoint already exists.")
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_path", type=str, required=True)
@@ -36,6 +48,9 @@ if __name__ == "__main__":
     device = torch.device("cuda")
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
+
+    model_ckpt = os.path.join(args.model_path, "lumina_mgpt/movqgan/270M/movqgan_270M.ckpt")
+    download_model_if_missing(model_ckpt)
 
     inference_solver = FlexARInferenceSolver(
         model_path=args.model_path,
